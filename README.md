@@ -11,7 +11,7 @@ MechaCar is suffering from production troubles that are blocking the manufacturi
 
 ### Linear Regression to Predict MPG
 
-<img align="left" src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/linear_regression.png" />
+<img align="left" src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlinear_regression.png" />
 
 Based on our statistical analysis and given a significance level of .05, the vehicle length and ground clearance variables provided a statistically significant or non-random amount of variance to the mpg values in the dataset.  The p-value of the y-intercept was also determined to be statistically significant, meaning the significant variables may need scaling or transforming to help improve the model's predictive power, or there may be other variables that help explain the variability of our dependent variable that were not included in the model.
 
@@ -23,7 +23,7 @@ Given our access to only the data given and inability to scale or add additional
 
 Total Summary     |  Lot Summary
 :-------------------------:|:-------------------------:
-<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/total_summary.png" width="400" />|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/lot_summary.png" width="550"/>
+<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xtotal_summary.png" width="400" />|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlot_summary.png" width="550"/>
 </br>
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.  Lot 1 performed the best in overall production uniformity, followed by Lot 2, then Lot 3.  Lot 3 did not fit the the above standard.  Our statistical tests found a variance of 170.29 in Lot 3's suspension coils.  Since lot 1 performed with a variance of only .98, and Lot 2 with a variance of 7.47, this brought the total variance to 62.29.  Design specifications were met by AutosRUs as a sum total, but there are improvements to be made among Lot 3's production standards. 
@@ -40,6 +40,10 @@ Lot 2 |  Lot 3
 <img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlot_2.png" width="450"/>|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlot_3.png" width="450"/>
 </br> 
 
-Using your knowledge of R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+The findings from our summary statistics followed the patterns observed from our t-test findings.  BIT ABOUT LEVEL OF PERFORMANCE OF EACH LOT AND MEANS MATCHING PREVIOUS FINDINGS.  Based on our statistical analysis and given a significance level of .05, all lots as a whole received a T-score of -1.89 and a p-value of .06.  This means the mean PSI of all analyzed lots falls -1.89 standard deviations from the mean population, and since the data was determined to be normally distributed and the p-value was determined to be statistically insignificant, we fail to reject the null.  In other words, the difference observed between the two means can be explained by random chance, and there is not sufficient evidence to conclude that any external effect exists.  
+
+t-score number of standard deviations away from the mean of the t-distribution
+
+briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
 
 Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
