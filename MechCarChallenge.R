@@ -5,6 +5,7 @@ getwd()
 #import dependencies
 library(dplyr)
 library(tidyr)
+library(ggplot2)
 
 #read csv into table
 mpg_table<- read.csv(file='resources/MechaCar_mpg.csv',check.names=F,stringsAsFactors = F)
@@ -28,3 +29,21 @@ total_summary <- suspension %>%
 #groupby lot summary statistics
 lot_summary <- suspension %>% group_by(Manufacturing_Lot) %>% 
   summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep')
+
+#determine if distribution is normal
+plt <- ggplot(suspension,aes(PSI))
+#visualize distribution using density plot
+plt + geom_density()
+
+#determine if PSI across all lots is statistically dif from pop mean
+t.test((suspension$PSI),mu=1500)
+
+#t-tests by lot
+lot_1 <- subset(suspension, Manufacturing_Lot == "Lot1")
+t.test(lot_1$PSI, mu=1500)
+
+lot_2 <- subset(suspension, Manufacturing_Lot == "Lot2")
+t.test(lot_2$PSI, mu=1500)
+
+lot_3 <- subset(suspension, Manufacturing_Lot == "Lot3")
+t.test(lot_3$PSI, mu=1500)
