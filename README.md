@@ -23,12 +23,23 @@ Given our access to only the data given and inability to scale or add additional
 
 Total Summary     |  Lot Summary
 :-------------------------:|:-------------------------:
-<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/total_summary.png" width="500" />|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/lot_summary.png" width="500"/>
+<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/total_summary.png" width="400" />|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/lot_summary.png" width="550"/>
 </br>
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.  Lot 1 performed the best in overall production uniformity, followed by Lot 2, then Lot 3.  Lot 3 did not fit the the above standard.  Our statistical tests found a variance of 170.29 in Lot 3's suspension coils.  Since lot 1 performed with a variance of only .98, and Lot 2 with a variance of 7.47, this brought the total variance to 62.29.  Design specifications were met by AutosRUs as a sum total, but there are improvements to be made among Lot 3's production standards. 
+</br>
+</br>
 
+### T-Tests on Suspension Coils
+All Lots  |   Lot 1   
+:-------------------------:|:-------------------------:
+<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xall_lots.png" width="450"/>|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlot_1.png" width="450"/>
 
+Lot 2 |  Lot 3
+:-------------------------:|:-------------------------:
+<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlot_2.png" width="450"/>|<img src="https://github.com/ajcurtis916/MechaCar_statistical_analysis/blob/main/resources/xlot_3.png" width="450"/>
+</br> 
 
+Using your knowledge of R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
 
 Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
