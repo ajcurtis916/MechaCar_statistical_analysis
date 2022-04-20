@@ -1,3 +1,4 @@
+
 # MechaCar Analysis
 ## *Statistical Analysis on AutosRUs’ newest prototype the MechaCar* 
 ### Project Overview: perform multiple linear regression, summary statistics and t-tests to determine issues in AutosRUs' manufacturing process, and design an additional statistical study to determine how AutosRUs' vehicle performance matches up against its competitors
@@ -5,7 +6,7 @@
 </br>
 
 ## Results
-MechaCar is suffering from production troubles that are blocking the manufacturing team’s progress. As a result, we have been tasked to statistically review production data for insights that may help the manufacturing team fix or optimize the manufacturing process.  During our statistical analysis we performed multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes, collected summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots, ran t-tests to determine if the manufacturing lots are statistically different from the mean population, and designed a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers:
+MechaCar is suffering from production troubles that are blocking the manufacturing team’s progress. As a result, we have been tasked with statistically reviewing production data for insights that may help the manufacturing team fix or optimize the manufacturing process.  During our statistical analysis, we performed multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes, collected summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots, ran t-tests to determine if the manufacturing lots are statistically different from the mean population, and designed a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers:
 </br>
 </br>
 
@@ -42,11 +43,18 @@ Lot 2 |  Lot 3
 
 Based on our statistical analysis and given a significance level of .05, all lots as a whole received a T-score of -1.89 and a p-value of .06.  This means the mean PSI of all analyzed lots (1498.78) fell -1.89 standard deviations away from the population mean (1500).  Since the data was determined to be normally distributed, and the p-value was not statistically significant, we failed to reject the null.  In other words, the difference observed between the two means can be explained by random chance, and there was not sufficient evidence to conclude that any external effects existed in the population.
 
-Lot 1 received a T-score of 0 and p-value of 1, meaning it was directly on target with the population mean.  It's mean also matched the population mean of 1500.  We again failed to reject the null.  Lot 2 received a T-score of .52 and a p-value of .61, it's mean was 1500.2.  We again failed to reject the null, any observed difference was small enough that is could be explained by random chance.  Lot 3 received a T-score of -2.09, p-value of .04, and mean of 1496.14.  Since the data was determined to be normally distributed, we can reject the null hypothesis and determine the effect exists in the population.
+Lot 1 received a T-score of 0, p-value of 1, and mean of 1500, meaning it was directly on target with the population mean.  We again failed to reject the null.  Lot 2 received a T-score of .52 and a p-value of .61, it's mean was 1500.2.  We again failed to reject the null, any observed difference was small enough that is could be explained by random chance.  Lot 3 received a T-score of -2.09, p-value of .04, and mean of 1496.14.  Since the data was determined to be normally distributed, we can reject the null hypothesis and determine the effect exists in the population.
 
-The findings from our summary statistics followed the patterns observed from our t-test findings.  While the overall sample of the three lots as a group passed in terms of variance and p-value, and we failed to reject the null, it was only because Lot 1 and Lot 2 performed well enough that it brought up the averages for Lot 3.  When digging down deeper in both the summary statistics and the t-tests, Lot 1 performed best, followed by Lot 2, then Lot 3.  Lot 3 shows room for improvement in its production. 
+The findings from our t-test followed the patterns observed from our summary statistics findings.  While the overall sample of the three lots as a group passed in terms of variance standards and p-value, and we failed to reject the null, it was only because Lot 1 and Lot 2 performed well enough that it brought up the averages for Lot 3. The means observed from both statistical analyses also matches.  When digging down deeper in both the summary statistics and the t-tests, Lot 1 performed best, followed by Lot 2, then Lot 3.  Lot 3 shows room for improvement in its part production. 
+</br>
+</br>
 
+### Study Design: MechaCar vs Competition
 
+We were tasked with designing a statistical study to quantify how the MechaCar performs against its competitors.  We feel strongly that inital cost, maintenance cost and fuel efficiency are major selling points, especially amid the current economic climate, and decided to test these metrics against the competition.  We would like to test these metrics over a span of five (5) years, to get a true feel for how maintanence cost will play out as the car begins to age.  Since we will be sampling from two different populations, and the metrics we want to analyze are numerical, we believe a two-sample t-test is the most fitting.
 
+Our **null hypothesis** states: Given 5 years of vehicle usage of vehicles driven between 10,000 and 17,000 miles each year, there is no difference between the performance of the MechCar versus its competitors, based on the metrics of initial cost, maintenance cost and fuel efficiency.
 
-Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
+Or **alternative hypothesis** states: Given 5 years of vehicle usage of vehicles driven between 10,000 and 17,000 miles each year, there is a difference between the performance of the MechCar versus its competitors, based on the metrics of initial cost, maintenance cost and fuel efficiency.
+
+The above mileage range was chosen as it includes the lower and higher ends of reported average miles driven each year.  AutosRUs will need to begin obtaining data on the maintenance cost of its customers, and continue obtaining data on the highway and city mpg performance and cost of each vehicle when purchased for those respective customers.  AutosRUs will also need to begin obtaining the same data from 1-3 vehicle models of it's biggest name-brand competitors.
